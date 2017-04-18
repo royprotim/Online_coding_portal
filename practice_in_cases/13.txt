@@ -1,0 +1,33 @@
+#include<string.h>
+#include<stdio.h>
+int main()
+	{
+	char a[100];
+	int i,s,sum,d,l;
+	scanf ("%[^\n]%*c", a);
+	s=0;sum=0;
+	l=strlen(a);
+	for(i=0;a[i]!='\0';i++)
+		{
+		if((a[i]>=65&&a[i]<=90)||(a[i]>=97)&&(a[i]<=122))
+			printf("%c",a[i]);
+		else if((a[i]>=48)&&a[i]<=57)
+			{
+			d=a[i]-'0';
+			s=s*10+d;
+			}
+		else
+			{
+			sum=sum+s;
+			s=0;
+			printf(" ");
+			}
+		
+			
+		}
+	if(a[l-1]>=48&&a[l-1]<=57)
+		sum=sum+s;
+	
+	printf("\n%d",sum);
+	}	
+

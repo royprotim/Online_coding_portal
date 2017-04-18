@@ -1,0 +1,13 @@
+# Read input from stdin and provide input before running code
+import time
+
+t = int(raw_input())
+ 
+def fact(n):
+	if n<=1:
+		return 1
+	return n*fact(n-1)
+ 
+for _ in xrange(t):
+	n = int(raw_input())
+	print fact(n)
