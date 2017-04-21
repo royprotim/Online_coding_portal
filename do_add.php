@@ -30,6 +30,7 @@ else if(isset($_POST['submit']))
 	$sum=shell_exec($count);
 	$sum=intval($sum);
 	$sum=$sum+1;
+	$marks=20;
 	$pblm_code=$_GET['Name'];
 	$newfilename1 = $sum.".txt";
 	$newfilename2 = $sum.".txt";
@@ -40,7 +41,8 @@ else if(isset($_POST['submit']))
         		{	  
               	if(move_uploaded_file($_FILES['out_file']['tmp_name'], $location2))
 			{
-			$query1 ="insert into test_cases values('$pblm_code','$location1','$location2')";
+			
+			$query1 ="insert into test_cases values('$pblm_code','$location1','$location2','$marks')";
 			$result = mysqli_query($dbConn, $query1) or die(mysqli_error($dbConn));
 			}
 		}
