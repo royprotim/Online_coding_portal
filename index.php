@@ -9,7 +9,7 @@
                    <input type="text"  name="std_roll" id="username" placeholder="UserRoll" required>
                     </br> </br>
                     
-                   <input type="text"  name="std_pass" id="username" placeholder="Password" required>
+                   <input type="password"  name="std_pass" id="username" placeholder="Password" required>
                     </br></br> 
                     
 	
